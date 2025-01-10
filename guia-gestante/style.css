@@ -1,0 +1,249 @@
+:root{
+    --tema1: #fcb200;
+}
+section{
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    display: flex;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Rubik", sans-serif;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+*{
+    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.center,.center_provas{
+    width: 75%;
+    height: auto;
+    display: flex;
+}
+.center_provas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inicial, .prova_social{
+    background: 
+    linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
+    url('wall.jpg'); /* Caminho para a imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  height: 100vh;
+}
+.prova_social{
+    background: 
+    linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
+    url('prag.png'); /* Caminho para a imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  height: 100vh;
+}
+#comprar{
+    background: 
+    linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
+    url('prag.png'); /* Caminho para a imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  height: 100vh;
+}
+.rodape{
+    background: rgba(5, 5, 82, 0.852) /* Cor de fundo com opacidade */
+
+}
+.cta{
+    background: rgb(65, 65, 255);
+    color: white;
+}
+.cta i{
+    animation: subir 1s ease-in-out infinite;
+    padding-left: 10px;
+}
+@keyframes subir {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-7px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.cta:hover{
+    color: rgb(65, 65, 255);
+    outline: 1px solid rgb(65, 65, 255);
+    background: white;
+}
+.prova_social{
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.prova_social{
+    min-height: 900px;
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+}
+.prova_social .setas{
+    display: none;
+}
+.container_comentarios{
+    width: 100%;
+    animation: scroll 30s linear infinite;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 5))
+    }
+}
+.container_comentarios::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem */
+}
+.container_comentarios{
+    scrollbar-width: none;
+}
+.container_comentarios {
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
+}
+.comentarios{
+    overflow-y: hidden;
+    flex-shrink: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: auto;
+    overflow-x: hidden;
+    min-height: fit-content;}
+
+.comentarios::before{
+}
+.comentario{
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20%;
+    background: #EDEAE3;
+    color: var(--cor-destaque);
+    border-radius: 10px;
+    height: 30rem;
+}
+.comentario .cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.comentario .cabecalho .profile{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 12px;
+    align-items: center;
+}
+.comentario .cabecalho .profile img{
+    height: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.comentario .cabecalho .profile .informacoes{
+    margin-left: 10%;
+    height: 100%;
+    width: 80%;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.comentario .cabecalho .profile .informacoes p{
+    height: auto;
+}
+.comentario .cabecalho .profile .informacoes p:nth-child(1){
+    font-size: 100%;
+    line-height: 1;
+}
+.comentario .cabecalho .profile .informacoes p:nth-child(2){
+    font-size: 11px;
+    line-height: 1;
+    color: var(--cor-base);
+}
+
+.comentario span{
+    margin: 12px 0px;
+    width: 100%;
+    display: flex;
+}
+.comentario span i{
+font-size: 19px;
+    color: #FBBD3D;
+}
+.comentario .texto{
+    color: black;
+    height: 90%;
+    font-weight: 300;
+    line-height: 1;
+    font-size: 100%;
+}
+.comentario .content{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.comentario .content img{
+    width: 100%;
+    height: 100%;
+}
+
+.prova{
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.prova .controles{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.prova .controles i{
+    color: var(--cor-thema);
+    background: white;
+    border-radius: 50%;
+    padding: 0.9rem 1rem;
+}
+.prova .controles i:hover{
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border-radius: 50%;
+    outline: 2px solid white; 
+}
