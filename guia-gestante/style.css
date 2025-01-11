@@ -162,7 +162,17 @@ body{
     justify-content: space-between; 
     align-items: center;
 }
-
+.depoimento .img{
+    border-radius: 50%;
+    border:5px solid white;
+    box-shadow: 0px 7px 12px rgba(92, 72, 72, 0.405);
+    width: 300px;
+    height: 300px;
+    background-image: url('gravida.gif');
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .depoimento .container{
     width: 100%; 
     display: flex; 
@@ -214,7 +224,7 @@ body{
     flex-wrap: wrap;
 }
 .depoimento .lado{
-    width: 70%; 
+    width: 67%; 
     display: flex; 
     align-items: start; 
     color: black;
