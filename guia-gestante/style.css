@@ -35,6 +35,19 @@ body{
     align-items: center;
     justify-content: center;
 }
+.inicial .lado p:nth-of-type(1){
+    padding: 20px 0px; 
+    font-weight: 700; 
+    font-size: 30px; 
+    color: white;
+
+}
+.inicial .lado p:nth-of-type(2){
+    padding: 10px 0px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 20px;
+}
 .inicial, .prova_social{
     background: 
     linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
@@ -58,6 +71,51 @@ body{
   background-size: cover; /* Faz a imagem cobrir toda a área */
   background-position: center; /* Centraliza a imagem */
   height: 100vh;
+  width: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+#comprar p:nth-of-type(1){
+    text-align: center; 
+    font-weight: 700; 
+    font-size: 55px;
+     width: 50%; 
+    line-height: 1.1;
+}
+#comprar .descri{
+    letter-spacing: 5px; 
+    padding-top: 20px; 
+    font-weight: 300; 
+    font-size: 23px;
+}
+#comprar .preco{
+    padding-top: 20px; 
+    text-align: center; 
+    font-weight: 700; 
+    font-size: 55px; 
+    width: 100%; 
+    line-height: 1.1;
+}
+#comprar a{
+    margin-top: 20px;
+    border-right:5px solid rgb(0, 0, 174); 
+    border-bottom:5px solid rgb(0, 0, 174); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px 0px; 
+    width: 40%;
+    text-decoration: none; 
+    font-weight: 600; 
+    border-radius: 50px; 
+    font-size: 30px; 
+    color: white; 
+    background: rgb(59, 59, 255);
+}
+#comprar img{
+    width: 30%; 
+    height: auto;
 }
 #rodape{
     background: rgb(5, 5, 82) /* Cor de fundo com opacidade */
@@ -91,21 +149,34 @@ body{
         transform: translateY(0px);
     }
 }
+.inicial{
+    padding-top: 20vh; 
+}
 .inicial .container{
-    padding-top: 100px; 
     width: 100%;  
     min-height: 90%;
     display: flex; 
     justify-content: space-between; 
     align-items: center;
 }
+
 .depoimento .container{
     width: 100%; 
     display: flex; 
     align-items: center; 
     justify-content: space-between;
 }
+.depoimento .lado p:nth-of-type(1){
+    padding: 10px 0px; color: black; font-weight: 700; font-size: 30px;
+}
+.depoimento .lado p{
+    padding: 10px 0px;
+    color: black; 
+    font-weight: 400; 
+    font-size:20px; 
+}
 .depoimento{
+    padding: 20px 0px;
     width: 100%; 
     min-height: 500px; 
     background: linear-gradient(to bottom right,white, rgb(240, 246, 255)); 
@@ -120,6 +191,11 @@ body{
     justify-content: center; 
     background: rgba(3, 3, 51, 0.857); 
     padding: 50px 0px;
+}
+.vantagens .item p{
+    color: white; 
+    font-weight: 300; 
+    text-align: center;
 }
 .vantagens .item{
     display: flex; 
@@ -142,8 +218,33 @@ body{
     justify-content: center; 
     flex-direction: column;
 }
+.design{
+    width: 100%; 
+    background: rgb(235, 235, 255);
+     min-height: 500px; 
+     padding: 50px 0px;
+}
+.design .center{
+    justify-content:space-evenly;
+}
+.design .center .lado:nth-of-type(1){
+    width: 40%;
+}
+.design .center .lado:nth-of-type(2){
+    width: 45%;
+}
+.design .center .lado p:nth-of-type(1){
+    font-size: 30px; 
+    font-weight: 600; 
+    color: #221435;
+}
+.inicial .container img{
+    width: 100%; 
+    height: auto;
+}
+
 .inicial .lado{
-    width: 40%; 
+    width: 47%; 
     min-height: 100%;
     display: flex;
     align-items: flex-start; 
@@ -154,6 +255,54 @@ body{
     color: rgb(65, 65, 255);
     outline: 1px solid rgb(65, 65, 255);
     background: white;
+}
+.faq{
+    min-height: 400px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    background: white;
+}
+.faq .item p{
+    color: #54595F; 
+    font-size: 17px;
+    text-align: left;
+    padding-left: 10px;
+}
+.faq .item{
+    padding: 0px 10px; 
+    height: 80px; 
+    width: 31%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 10px; 
+    background: rgb(106 106 255 / 6%)
+}
+.faq .titulo{
+    font-size: 40px;
+}
+.faq .lista{
+    width: 100%; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: flex; 
+    min-height: 25%;
+}
+.faq p:nth-of-type(1){
+    text-align: center;
+    font-weight: 400; 
+    color: #221435;  
+    line-height: 1;
+}
+.faq p:nth-of-type(2){
+    font-size: 20px; 
+    font-family: Crimson Pro; 
+    color: #54595F; 
+    letter-spacing: 5px; 
+    padding: 40px 0px;
 }
 .prova_social{
     color: white;
@@ -297,6 +446,18 @@ font-size: 19px;
     width: 100%;
     height: 100%;
 }
+.prova p:nth-of-type(2){
+    font-size: 18px; 
+    font-weight: 300; 
+    width: 70%; 
+    text-align: center;
+}
+.prova .titulo{
+    padding: 20px 0px;
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+}
 .prova .controles{
     justify-content: center;
     display: flex;
@@ -322,11 +483,17 @@ font-size: 19px;
     .inicial .lado{
         width: 100%;
     }
+    .inicial .lado p:nth-of-type(1){
+        text-align: center;
+    }
+    .inicial .lado p:nth-of-type(2){
+        font-size: 100%;
+        text-align: justify;
+    }
     .inicial .lado:nth-of-type(1){
         order: 1;
     }
     .inicial .lado:nth-of-type(2){
-        order: 2;
     }
     .depoimento .container{
         flex-direction: column;
@@ -340,13 +507,113 @@ font-size: 19px;
     }
     .depoimento .lado p{
         width: 100%;
+        font-size: 100%;
         text-align: justify;
     }
     .vantagens .container{
         flex-direction: column;
     }
     .vantagens .item{
+        padding: 20px 0px ;
         width: 100%;
+    }
+    .vantagens .item p:nth-of-type(2){
+        text-align: justify;
+        font-size: 100%;
+    }
+    .design .center{
+        flex-direction: column;
+    }
+    .design .center .lado p{
+        width: 100%;
+    }
+    .inicial .lado p:nth-of-type(1),
+    .depoimento .lado p:nth-of-type(1),
+    .design .center .lado p:nth-of-type(1),
+    .prova .titulo,
+    .inicial .lado p:nth-of-type(1),
+    .depoimento .lado p:nth-of-type(1),
+    .design .center .lado p:nth-of-type(1), .faq .titulo{
+        font-size: 150%;
+    }
+    .design .center .lado p:nth-of-type(1){
+        text-align: center;
+    }
+    .design .center .lado p:nth-of-type(2){
+        text-align: justify;
+    }
+    .design .center .lado{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .design .center .lado:nth-of-type(1) img{
+        width: 90%;
+        aspect-ratio: 1/1;
+    }
+    .design .center .lado:nth-of-type(1){
+        width: 100%;
+    }
+    .design .center .lado:nth-of-type(2){
+        width: 100%;
+    }    
+    .inicial .container img{
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    .prova .titulo{
+        text-align: center;
+    }.prova .titulo i{
+        display: none;
+    }
+    .prova p:nth-of-type(2){
+        font-size: 100%;
+        text-align: justify;
+        width: 100%;
+    }
+    .comentario{
+        width: 100%;
+    }
+    .faq{
+        padding: 50px 0px;
+    }
+    .faq p:nth-of-type(1){
+        text-align: center;
+    }
+    .faq p:nth-of-type(2){
+        text-align: center;
+        font-size: 100%;
+    }
+    .faq .lista{
+        flex-direction: column;
+    }
+    .faq .item{
+        margin: 10px 0px;
+        height: 100px;
+        width: 100%;
+    }
+    .faq .item p{
+        font-size: 100%;
+        font-weight: 400;
+    }
+    #comprar p:nth-of-type(1){
+        font-size: 190%;
+        width: 100%;
+    }
+    #comprar .descri{
+        font-size: 100%;
+        text-align: center;
+    }
+    #comprar a{
+        width: 100%;
+        font-size: 20px;
+    }
+    #comprar img{
+        width: 70%;
+    }
+    .inicial{
+        padding-top: 25vh;
     }
 
 }
