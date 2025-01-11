@@ -70,7 +70,7 @@ body{
 #comprar{
     background: 
     linear-gradient(rgba(5, 5, 82, 0.639), rgba(5, 5, 82, 0.639)), /* Cor de fundo com opacidade */
-    url('prag.png'); /* Caminho para a imagem */
+    url('compra.jpg'); /* Caminho para a imagem */
   background-size: cover; /* Faz a imagem cobrir toda a área */
   background-position: center; /* Centraliza a imagem */
   height: 100vh;
