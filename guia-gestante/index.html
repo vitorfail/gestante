@@ -24,6 +24,7 @@
         <script type="text/javascript" src="js/flipdown/flipdown.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=deployed_code_account" />
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Limelight&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yatra+One&display=swap" rel="stylesheet">
     </head>
@@ -58,7 +59,27 @@
                         <a class="cta" href="#comprar">Confira Agora<i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <div class="lado">
-                        <img src="capa.png"/>
+                        <video
+                        style="background-color: transparent;"
+                        id="my-video"
+                        class="video-js"
+                        controls
+                        preload="auto"
+                        width= "70%"
+                        height= "auto"
+                    
+                        poster="logo-video.png"
+                        data-setup="{}"
+                    >
+                        <source src="intro.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                            >supports HTML5 video</a
+                        >
+                        </p>
+                    </video>
                     </div>
                 </div>
             </div>
@@ -287,13 +308,14 @@
                 <p class="descri">de <strong>R$ 259,90</strong>  Por Apenas</p>
                 <p class="preco">R$ 9,45*</p>
                 <p class="descri">Ou no cartão</p>
-                <a href="#comprar">Comprar Agora</a>
+                <a href="https://pay.cakto.com.br/CnokDYj">Comprar Agora</a>
                 <img  src="./logos.png"/>
             </div>
         </section>
         <section id="rodape">
             <p>© GF360 | Todos os direitos reservados.</p>
         </section>
+        <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
