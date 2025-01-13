@@ -11,6 +11,14 @@ section{
     height: auto;
     display: flex;
 }
+.video-js{
+    aspect-ratio:16/9;
+    width: 70%;
+    background-color: none;
+}
+.my-video-dimensions{
+    height: auto;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -45,6 +53,11 @@ body{
     color: white;
 
 }
+.inicial .lado:nth-of-type(2){
+    align-items: center;
+
+}
+
 .inicial .lado p:nth-of-type(2){
     padding: 10px 0px;
     color: rgb(255, 255, 255);
@@ -633,5 +646,7 @@ font-size: 19px;
     .inicial{
         padding-top: 300px;
     }
-
+    .video-js{
+        width: 100%;
+    }
 }
