@@ -13,7 +13,7 @@ section{
 }
 .video-js{
     aspect-ratio:16/9;
-    width: 70%;
+    width: 100%;
     background-color: none;
 }
 .my-video-dimensions{
@@ -149,6 +149,7 @@ body{
     justify-content: center;
     background: rgb(65, 65, 255);
     color: white;
+    margin: 20px 10px;
 }
 .cta i{
     animation: subir 1s ease-in-out infinite;
@@ -175,12 +176,15 @@ body{
     justify-content: space-between; 
     align-items: center;
 }
+.inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .prova .titulo, .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .faq .titulo{
+    font-size: 37px;
+}
 .depoimento .img{
     border-radius: 50%;
     border:5px solid white;
     box-shadow: 0px 7px 12px rgba(92, 72, 72, 0.405);
     width: 300px;
-    height: 300px;
+    aspect-ratio: 1/1;
     background-image: url('gravida.gif');
     background-size:auto;
     background-repeat: no-repeat;
@@ -193,7 +197,7 @@ body{
     justify-content: space-between;
 }
 .depoimento .lado p:nth-of-type(1){
-    padding: 10px 0px; color: black; font-weight: 700; font-size: 30px;
+    padding: 10px 0px; color: black; font-weight: 700;
 }
 .depoimento .lado p{
     padding: 10px 0px;
@@ -216,7 +220,7 @@ body{
     align-items: center; 
     justify-content: center; 
     background: rgba(3, 3, 51, 0.857); 
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 .vantagens .item p{
     color: white; 
@@ -248,7 +252,7 @@ body{
     width: 100%; 
     background: rgb(235, 235, 255);
      min-height: 500px; 
-     padding: 50px 0px;
+     padding: 100px 0px;
 }
 .design .center{
     justify-content:space-evenly;
@@ -260,7 +264,6 @@ body{
     width: 45%;
 }
 .design .center .lado p:nth-of-type(1){
-    font-size: 30px; 
     font-weight: 600; 
     color: #221435;
 }
@@ -307,9 +310,7 @@ body{
     border-radius: 10px; 
     background: rgb(106 106 255 / 6%)
 }
-.faq .titulo{
-    font-size: 40px;
-}
+
 .faq .lista{
     width: 100%; 
     justify-content: space-between; 
@@ -481,7 +482,6 @@ font-size: 19px;
 .prova .titulo{
     padding: 20px 0px;
     font-weight: 700;
-    font-size: 28px;
     color: white;
 }
 .prova .controles{
@@ -502,9 +502,9 @@ font-size: 19px;
     border-radius: 50%;
     outline: 2px solid white; 
 }
-@media screen and (max-width:1800px){
-    .center{
-        width: 70%;
+@media screen and (min-width:1800px){
+    .center,.center_provas{
+        width: 55%;
     }
 }
 @media screen and (max-width:700px) {
@@ -607,7 +607,7 @@ font-size: 19px;
         width: 100%;
     }
     .faq{
-        padding: 50px 0px;
+        padding: 100px 0px;
     }
     .faq p:nth-of-type(1){
         text-align: center;
@@ -649,4 +649,8 @@ font-size: 19px;
     .video-js{
         width: 100%;
     }
+    .depoimento .img{
+        width: 100%;
+    }
+    #comprar{background-position: 40% center;}
 }
