@@ -19,6 +19,15 @@ section{
 .my-video-dimensions{
     height: auto;
 }
+.gravida{
+    aspect-ratio: 1/1;
+            height: 140%;
+            background-image: url('p.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            opacity: 0.9;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -46,6 +55,16 @@ body{
     align-items: center;
     justify-content: center;
 }
+.header{
+    position: absolute; display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;
+        width: 100%; top: 0; 
+        overflow: hidden;
+        background: rgba(5, 166, 247, 0);
+        height: 4%;
+}
 .inicial .lado p:nth-of-type(1){
     padding: 20px 0px; 
     font-weight: 700; 
@@ -64,7 +83,15 @@ body{
     font-weight: 400;
     font-size: 20px;
 }
-.inicial, .prova_social{
+.inicial{
+    background: 
+    linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
+    url('wall.jpg'); /* Caminho para a imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  height: 70vh;
+}
+.prova_social{
     background: 
     linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
     url('wall.jpg'); /* Caminho para a imagem */
@@ -179,6 +206,9 @@ body{
 .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .prova .titulo, .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .faq .titulo{
     font-size: 37px;
 }
+.depoimento{
+    position: relative;
+}
 .depoimento .img{
     border-radius: 50%;
     border:5px solid white;
@@ -189,6 +219,31 @@ body{
     background-size:auto;
     background-repeat: no-repeat;
     background-position: center;
+}
+.depoimento::before{
+    position: absolute;
+    top: -7%;
+    left: 0;
+    width: 150px;
+    aspect-ratio: 1/1;
+    content: "";
+    background: url("rosa2.png");
+    transform: rotateZ(150deg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.depoimento::after{
+    position: absolute;
+    bottom: -7%;
+    right: 0;
+    width: 200px;
+    aspect-ratio: 1/1;
+    content: "";
+    background: url("rosa2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .depoimento .container{
     width: 100%; 
@@ -209,7 +264,7 @@ body{
     padding: 20px 0px;
     width: 100%; 
     min-height: 500px; 
-    background: linear-gradient(to bottom right,white, rgb(240, 246, 255)); 
+    background: rgba(0, 0, 255, 0.11); 
     display: flex; 
     align-items: center; 
     justify-content: center;
@@ -226,13 +281,19 @@ body{
     color: white; 
     font-weight: 300; 
     text-align: center;
+    width: 80%;
 }
 .vantagens .item{
+    padding: 20px 0px;
     display: flex; 
     align-items: center; 
     justify-content: start; 
     flex-direction: column; 
-    width: 30%;
+    width: 47%;
+}
+.vantagens .item i{
+    font-size: 60px;
+    color: rgba(95, 95, 231, 0.857);
 }
 .vantagens .container{
     width: 100%; 
@@ -286,13 +347,14 @@ body{
     background: white;
 }
 .faq{
-    min-height: 400px; 
+    min-height: 500px; 
     width: 100%; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
     flex-direction: column; 
     background: white;
+    padding: 100px 0px;
 }
 .faq .item p{
     color: #54595F; 
@@ -300,21 +362,33 @@ body{
     text-align: left;
     padding-left: 10px;
 }
+.faq .item div:nth-of-type(2){
+    display: flex; align-items: flex-start; justify-content: center; flex-direction: column;
+}
 .faq .item{
-    padding: 10px 10px; 
-    height: 80px; 
-    width: 31%; 
+    padding: 30px 10px; 
+    width: 100%; 
+    margin: 10px 0px;
     display: flex; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start; 
     border-radius: 10px; 
     background: rgb(106 106 255 / 6%)
 }
-
+.faq .item .imagem{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    height: 100px; 
+    aspect-ratio: 1/1; 
+    background: rgb(106, 106, 255);
+}
 .faq .lista{
     width: 100%; 
     justify-content: space-between; 
     align-items: center; 
+    flex-direction: column;
     display: flex; 
     min-height: 25%;
 }
@@ -324,7 +398,7 @@ body{
     color: #221435;  
     line-height: 1;
 }
-.faq p:nth-of-type(2){
+.faq .legenda{
     font-size: 20px; 
     font-family: Crimson Pro; 
     color: #54595F; 
@@ -556,6 +630,7 @@ font-size: 19px;
         flex-direction: column;
     }
     .design .center .lado p{
+        text-align: justify;
         width: 100%;
     }
     .inicial .lado p:nth-of-type(1),
@@ -612,7 +687,7 @@ font-size: 19px;
     .faq p:nth-of-type(1){
         text-align: center;
     }
-    .faq p:nth-of-type(2){
+    .faq .legenda{
         text-align: center;
         font-size: 100%;
     }
@@ -621,12 +696,24 @@ font-size: 19px;
     }
     .faq .item{
         margin: 10px 0px;
-        height: 100px;
+        flex-direction: column;
         width: 100%;
     }
     .faq .item p{
         font-size: 100%;
         font-weight: 400;
+    }
+    .faq .item div:nth-of-type(2){
+        align-items: center;
+    }
+    .faq .item .imagem{
+        height: 80px;
+    }
+    .faq .item div:nth-of-type(2) p:nth-of-type(1){
+        padding: 20px 0px;
+    }
+    .faq .item div:nth-of-type(2) p:nth-of-type(2){
+        text-align: justify;
     }
     #comprar p:nth-of-type(1){
         font-size: 190%;
@@ -644,13 +731,42 @@ font-size: 19px;
         width: 70%;
     }
     .inicial{
-        padding-top: 300px;
+            background: 
+            linear-gradient(rgba(5, 5, 82, 0.644), rgba(5, 5, 82, 0.644)), /* Cor de fundo com opacidade */
+            url('wall.jpg'); /* Caminho para a imagem */
+          background-size: cover; /* Faz a imagem cobrir toda a área */
+          background-position: center; /* Centraliza a imagem */
+        
+        padding-top: 250px;
     }
     .video-js{
         width: 100%;
     }
+    .depoimento{
+        padding: 70px 0px;
+    }
     .depoimento .img{
-        width: 100%;
+        width: 60%;
     }
     #comprar{background-position: 40% center;}
+    .depoimento .lado p:nth-of-type(1){
+        text-align: center;
+    }
+    .gravida{
+        height: 60%;
+    }
+    .header{
+        height: 3%;
+    }
+    .vantagens .item p{
+        width: 100%;
+    }
+    .depoimento::before{
+        top: -1%;
+        width: 60px;
+    }
+    .depoimento::after{
+        width: 60px;
+        bottom: -1%;
+    }
 }
