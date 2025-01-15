@@ -627,6 +627,11 @@ font-size: 19px;
     border-radius: 50%;
     outline: 2px solid white; 
 }
+@media screen and (min-width:890px){
+    .comentario{
+        width: 25%;
+    }
+}
 @media screen and (min-width:1800px){
     .center,.center_provas{
         width: 55%;
