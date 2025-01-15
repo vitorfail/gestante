@@ -636,6 +636,9 @@ font-size: 19px;
     .center,.center_provas{
         width: 55%;
     }
+    .comentario{
+        width: 11%;
+    }
 }
 @media screen and (max-width:700px) {
     .inicial .container{
