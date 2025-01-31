@@ -245,7 +245,7 @@ body{
 .depoimento::before{
     position: absolute;
     top: -17%;
-    left: -52%;
+    left: -58%;
     height: 120vh;
     aspect-ratio: 1/1;
     z-index: 2;
