@@ -127,6 +127,9 @@ body{
   background-position: center; /* Centraliza a imagem */
   height: 100vh;
 }
+#comprar .center{
+    justify-content: space-between;
+}
 #comprar{
     background: 
     linear-gradient(rgba(5, 5, 82, 0.639), rgba(5, 5, 82, 0.639)), /* Cor de fundo com opacidade */
@@ -139,12 +142,57 @@ body{
   align-items: center; 
   justify-content: center;
 }
-#comprar p:nth-of-type(1){
+#comprar .oferta{
+    width: 100%;
     text-align: center; 
     font-weight: 700; 
-    font-size: 55px;
-     width: 50%; 
+    font-size: 270%;
     line-height: 1.1;
+}
+#comprar .precos{
+    position: relative;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.466);
+    padding: 100px 0px;
+    width: 37%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #0c3a77;
+    border-radius: 20px;
+}
+#comprar .precos:nth-of-type(2){
+    background: linear-gradient(to right bottom,#2fcbb7, #1e7e71);
+}
+#comprar .precos:nth-of-type(2){}
+#comprar .precos .placa {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    top: -1%;
+    left: -1%;
+}
+#comprar .precos .placa .etiqueta {
+    width: 700px;
+    height: 90%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    transform: rotateZ(-43deg);
+}
+#comprar .precos .placa p {
+    display: flex;
+    color: white;
+    font-weight: 700;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background: red;
+    box-shadow: inset 0px 0px 12px rgb(44 44 44 / 56%), 0px 12px 32px rgba(0, 0, 0, 0.12);
 }
 #comprar .descri{
     letter-spacing: 5px; 
@@ -168,16 +216,18 @@ body{
     align-items: center; 
     justify-content: center; 
     padding: 20px 0px; 
-    width: 40%;
+    width: fit-content;
+    padding: 15px 25px;
     text-decoration: none; 
     font-weight: 600; 
     border-radius: 50px; 
-    font-size: 30px; 
+    font-size: 130%; 
     color: white; 
     background: rgb(59, 59, 255);
 }
 #comprar img{
-    width: 30%; 
+    margin-top: 10PX;
+    width: 40%; 
     height: auto;
 }
 #rodape{
@@ -196,7 +246,7 @@ body{
     justify-content: center;
     background: rgb(65, 65, 255);
     color: white;
-    margin: 20px 10px;
+    margin: 20px 0px;
 }
 .cta i{
     animation: subir 1s ease-in-out infinite;
@@ -269,6 +319,23 @@ body{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.depoimento .svg svg{
+    width: 8%;
+    height: 12%;
+}
+.depoimento .svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.depoimento{
+    position: relative;
+}
+.depoimento path{
+    fill: transparent;
+    position: absolute;
+    margin: 0px 10px;
 }
 .depoimento .container{
     width: 100%; 
@@ -791,7 +858,7 @@ font-size: 19px;
     .faq .item div:nth-of-type(2) p:nth-of-type(2){
         text-align: justify;
     }
-    #comprar p:nth-of-type(1){
+    #comprar .oferta{
         font-size: 190%;
         width: 100%;
     }
@@ -800,7 +867,7 @@ font-size: 19px;
         text-align: center;
     }
     #comprar a{
-        width: 100%;
+        width: 60%;
         font-size: 20px;
     }
     #comprar img{
@@ -844,5 +911,16 @@ font-size: 19px;
     .depoimento::after{
         width: 90px;
         bottom: -2%;
+    }
+    #comprar{
+        height: fit-content;
+    }
+    #comprar .center{
+        width: 100%;
+        flex-direction: column;
+    }
+    #comprar .center .precos{
+        margin: 50px 0px;
+        width: 90%;
     }
 }
