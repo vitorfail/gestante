@@ -231,7 +231,7 @@ body{
     height: auto;
 }
 #rodape{
-    background: rgb(5, 5, 82) /* Cor de fundo com opacidade */
+    background: rgb(0, 0, 0) /* Cor de fundo com opacidade */
 
 }
 .cta{
@@ -274,7 +274,7 @@ body{
     align-items: center;
 }
 .vantagens .titulo,
- .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .prova .titulo, .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .faq .titulo{
+ .inicial .lado p:nth-of-type(1),.depoimento .dep, .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .prova .titulo, .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .faq .titulo{
     font-size: 34px;
 }
 .depoimento{
@@ -292,37 +292,119 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
-.depoimento::before{
-    position: absolute;
-    top: -17%;
-    left: -62%;
-    height: 120vh;
-    aspect-ratio: 1/1;
-    z-index: 2;
-    content: "";
-    background: url("svg1.png");
-    transform: rotateZ(-110deg);
-    background-position: center;
-    background-size: contain;
+.depoimento .container:nth-of-type(2) .img{
+    background-image: url('gravida2.gif');
+    background-size:cover;
     background-repeat: no-repeat;
-}
-.depoimento::after{
-    z-index: 2;
-    position: absolute;
-    bottom: -37%;
-    right: -52%;
-    height: 90vh;
-    aspect-ratio: 1/1;
-    content: "";
-    transform: rotateZ(160deg);
-    background: url("svg2.png");
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
-.depoimento .svg svg{
-    width: 8%;
-    height: 12%;
+.depoimento .svg .cima{
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 12%;
+}
+.depoimento .svg .flores img:nth-of-type(1){
+    width: 4%;
+}
+.depoimento .svg .baixo, .depoimento .svg .cima{
+
+}
+.depoimento .svg .baixo{
+    width: 22%;
+    z-index: 1;
+    position: absolute;
+    aspect-ratio: 1.1/1;
+    bottom: -22%;
+    right: -9%;
+}
+.depoimento .svg .flores img{
+    width: 50px;
+    aspect-ratio: 1/2;
+}
+.depoimento .svg .flores .grass img{
+    width: 100px;
+    height: 50px;
+    margin: 0px -10%;
+
+}
+.depoimento .svg  .grass1 img{
+    width: 100px;
+    height: 50px;
+    margin: 0px -10%;
+}
+.depoimento .svg .grass1{
+    transform: rotateX(180deg);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    top: 0;
+}
+.depoimento .svg .flores .grass{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.depoimento .svg .flores{
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between
+    ;
+    align-items: flex-end;
+    height: auto;
+}
+
+.depoimento .svg .sol div{
+    position: absolute;
+    display: flex;
+    width: 200%;
+    aspect-ratio: 1/1;
+    background: url("flores/sol_.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: sol_ 3s linear infinite;
+}
+.depoimento .svg .sol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 6%;
+    aspect-ratio: 1/1;
+    top: -7%;
+    right: -2%;
+    aspect-ratio: 1/1;
+    background: url("flores/sol.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: sol 3s linear infinite;
+}
+@keyframes sol {
+    from{
+        transform: rotateZ(180deg);
+    }
+}
+@keyframes sol_ {
+    0%{
+        scale: 0.8;
+    }
+    50%{
+        scale: 1;
+    }
+    100%{
+        scale: 0.8;
+    }
 }
 .depoimento .svg{
     position: absolute;
@@ -342,6 +424,9 @@ body{
     display: flex; 
     align-items: center; 
     justify-content: space-between;
+}
+.depoimento .dep{
+    padding: 10px 0px; color: black; font-weight: 700;
 }
 .depoimento .lado p:nth-of-type(1){
     padding: 10px 0px; color: black; font-weight: 700;
@@ -776,7 +861,7 @@ font-size: 19px;
         text-align: justify;
         width: 100%;
     }
-    .inicial .lado p:nth-of-type(1),
+    .depoimento .dep,.inicial .lado p:nth-of-type(1),
     .depoimento .lado p:nth-of-type(1),
     .design .center .lado p:nth-of-type(1),
     .prova .titulo,
@@ -892,7 +977,7 @@ font-size: 19px;
         width: 60%;
     }
     #comprar{background-position: 40% center;}
-    .depoimento .lado p:nth-of-type(1){
+    .depoimento .lado p:nth-of-type(1), .depoimento .dep{
         text-align: center;
     }
     .gravida{
@@ -922,5 +1007,24 @@ font-size: 19px;
     #comprar .center .precos{
         margin: 50px 0px;
         width: 90%;
+    }
+    .depoimento .svg  .grass1 img, .depoimento .svg .flores .grass img{
+        margin: 0;
+    }
+    .depoimento .svg .flores .grass img{
+        width: 150px;
+    }
+    .depoimento .svg .cima{
+        width: 23%;
+        opacity: 0;
+    }
+    .depoimento .svg .sol{
+        opacity: 1;
+        top: -2%;
+        right: -2%;
+        width: 20%;
+    }
+    .depoimento .svg .flores img{
+        aspect-ratio: inherit;
     }
 }
