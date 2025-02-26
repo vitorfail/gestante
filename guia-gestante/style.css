@@ -238,8 +238,10 @@ body{
     cursor: pointer; 
     border-radius: 10px; 
     font-weight: 500; 
-    width: 70%; 
+    width: 40%; 
+    min-width: fit-content;
     height: 50px;  
+    padding: 0px 20px;
     text-decoration: none; 
     display: flex; 
     align-items: center; 
@@ -274,7 +276,7 @@ body{
     align-items: center;
 }
 .vantagens .titulo,
- .inicial .lado p:nth-of-type(1),.depoimento .dep, .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .prova .titulo, .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .faq .titulo{
+ .inicial .lado p:nth-of-type(1),.depoimento .dep, .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .prova .titulo, .inicial .lado p:nth-of-type(1), .depoimento .lado p:nth-of-type(1), .design .center .lado p:nth-of-type(1), .faq .titulo, .alerta .titulo{
     font-size: 34px;
 }
 .depoimento{
@@ -475,7 +477,8 @@ body{
     background: rgba(95, 95, 231, 0.857);
 }
 .vantagens .titulo{
-    font-weight: 300;
+    text-align: center;
+    font-weight: 600;
     padding-bottom: 50px;
 }
 .vantagens .titulo strong{
@@ -494,7 +497,7 @@ body{
     align-items: center; 
     justify-content: start; 
     flex-direction: column; 
-    width: 47%;
+    width: 42%;
 }
 .vantagens .item i{
     font-size: 60px;
@@ -809,9 +812,23 @@ font-size: 19px;
     align-items: center;
     justify-content: space-between;
 }
+.alerta .t{
+    display: flex; align-items: center;
+}
+.alerta .titulo{
+    font-size: 40px; color: #351414; padding: 10px 0px; font-weight: 600;
+}
+.alerta img{
+    height: auto;
+    width: 70%; 
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.197);
+}
 @media screen and (min-width:890px){
     .comentario{
         width: 27%;
+    }
+    .alerta img{
+        width: 100%;
     }
 }
 @media screen and (min-width:1800px){
@@ -843,6 +860,14 @@ font-size: 19px;
     }
     .depoimento .container{
         flex-direction: column;
+    }
+    .alerta .t{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .alerta img{
+        width: 120%;
     }
     .cta{
         width: 100%;
@@ -880,7 +905,7 @@ font-size: 19px;
     .prova .titulo,
     .inicial .lado p:nth-of-type(1),
     .depoimento .lado p:nth-of-type(1),
-    .design .center .lado p:nth-of-type(1), .faq .titulo{
+    .design .center .lado p:nth-of-type(1), .faq .titulo, .alerta .titulo,.vantagens .titulo{
         font-size: 150%;
     }
     .design .center .lado p:nth-of-type(1){
