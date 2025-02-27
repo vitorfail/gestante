@@ -162,7 +162,7 @@ body{
     border-radius: 20px;
 }
 #comprar .precos:nth-of-type(2){
-    background: linear-gradient(to right bottom,#2fcbb7, #1e7e71);
+    background: linear-gradient(to right bottom, #cb2fad, #5f1e7e);
 }
 #comprar .precos:nth-of-type(2){}
 #comprar .precos .placa {
