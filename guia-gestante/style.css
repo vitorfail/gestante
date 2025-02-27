@@ -146,14 +146,14 @@ body{
     width: 100%;
     text-align: center; 
     font-weight: 700; 
-    font-size: 270%;
+    font-size: 240%;
     line-height: 1.1;
 }
 #comprar .precos{
     position: relative;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.466);
     padding: 100px 0px;
-    width: 37%;
+    width: 41%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,7 +221,7 @@ body{
     text-decoration: none; 
     font-weight: 600; 
     border-radius: 50px; 
-    font-size: 130%; 
+    font-size: 150%; 
     color: white; 
     background: rgb(59, 59, 255);
 }
@@ -253,16 +253,18 @@ body{
 .cta i{
     animation: subir 1s ease-in-out infinite;
     padding-left: 10px;
+    font-size: 140%;
 }
 @keyframes subir {
     0%{
-        transform: translateY(0px);
+
+        transform:rotateZ(90deg) translateY(0px) translateX(-6px);
     }
     50%{
-        transform: translateY(-7px);
+        transform:rotateZ(90deg) translateY(-7px) translateX(-6px);
     }
     100%{
-        transform: translateY(0px);
+        transform:rotateZ(90deg) translateY(0px) translateX(-6px);
     }
 }
 .inicial{
@@ -409,6 +411,7 @@ body{
     }
 }
 .depoimento .svg{
+    pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -421,14 +424,23 @@ body{
     position: absolute;
     margin: 0px 10px;
 }
+.depoimento .conjunto{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 .depoimento .container{
-    width: 100%; 
+    width: 50%; 
     display: flex; 
     align-items: center; 
+    flex-direction: column;
     justify-content: space-between;
 }
 .depoimento .dep{
+    width: 70%;
+    text-align: center;
     padding: 10px 0px; color: black; font-weight: 700;
+    margin-bottom: 40px;
 }
 .depoimento .lado p:nth-of-type(1){
     padding: 10px 0px; color: black; font-weight: 700;
@@ -468,6 +480,7 @@ body{
     bottom: 0;
     opacity: 0.3;
     left: 0;
+    pointer-events: none;
     width: 100%;
     height: 100%;
 }
@@ -479,6 +492,7 @@ body{
 .vantagens .titulo{
     text-align: center;
     font-weight: 600;
+    width: 70%;
     padding-bottom: 50px;
 }
 .vantagens .titulo strong{
@@ -497,7 +511,7 @@ body{
     align-items: center; 
     justify-content: start; 
     flex-direction: column; 
-    width: 42%;
+    width: 25%;
 }
 .vantagens .item i{
     font-size: 60px;
@@ -512,7 +526,7 @@ body{
 .depoimento .lado{
     width: 67%; 
     display: flex; 
-    align-items: start; 
+    align-items: center; 
     color: black;
     justify-content: center; 
     flex-direction: column;
@@ -815,6 +829,12 @@ font-size: 19px;
 .alerta .t{
     display: flex; align-items: center;
 }
+.alerta .t .gif{
+    background: url('./sirene.gif'); 
+    background-size: cover; 
+    height: 80px; 
+    width: 80px;
+}
 .alerta .titulo{
     font-size: 40px; color: #351414; padding: 10px 0px; font-weight: 600;
 }
@@ -859,10 +879,12 @@ font-size: 19px;
     .inicial .lado:nth-of-type(2){
     }
     .depoimento .container{
+        width: 100%;
         flex-direction: column;
     }
     .alerta .t{
         flex-direction: column;
+        width: 100%;
         align-items: center;
         justify-content: center;
     }
@@ -870,14 +892,13 @@ font-size: 19px;
         width: 120%;
     }
     .cta{
-        width: 100%;
+        width: 90%;
     }
     .depoimento .lado{
         align-items: center;
         width: 100%;
     }
     .depoimento .lado p{
-        width: 100%;
         font-size: 100%;
         text-align: justify;
     }
@@ -908,6 +929,7 @@ font-size: 19px;
     .design .center .lado p:nth-of-type(1), .faq .titulo, .alerta .titulo,.vantagens .titulo{
         font-size: 150%;
     }
+    
     .design .center .lado p:nth-of-type(1){
         text-align: center;
     }
@@ -972,8 +994,16 @@ font-size: 19px;
     .faq .item div:nth-of-type(2){
         align-items: center;
     }
+    .depoimento .conjunto{
+        flex-direction: column;
+        align-items: center;
+    }
     .faq .item .imagem{
         height: 80px;
+    }
+    .alerta .t .gif{
+        height: 35px;
+        width: 35px;
     }
     .faq .item div:nth-of-type(2) p:nth-of-type(1){
         padding: 20px 0px;
