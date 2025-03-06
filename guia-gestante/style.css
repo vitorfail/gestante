@@ -111,21 +111,27 @@ body{
   background-position: center; /* Centraliza a imagem */
   height: 70vh;
 }
-.prova_social{
-    background: 
-    linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
-    url('wall.jpg'); /* Caminho para a imagem */
-  background-size: cover; /* Faz a imagem cobrir toda a área */
-  background-position: center; /* Centraliza a imagem */
-  height: 100vh;
-}
+
 .prova_social{
     background: 
     linear-gradient(rgba(5, 5, 82, 0.536), rgba(5, 5, 82, 0.536)), /* Cor de fundo com opacidade */
     url('prag.png'); /* Caminho para a imagem */
   background-size: cover; /* Faz a imagem cobrir toda a área */
   background-position: center; /* Centraliza a imagem */
-  height: 100vh;
+}
+.prova_social .titulo{
+    display: flex;
+    align-items: center;
+}
+.prova_social span{
+    margin-top: 50px;
+    display: flex;
+    height: 100px;
+    width: 160px;
+    background: url("megafone.gif");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #comprar .center{
     justify-content: space-between;
@@ -682,6 +688,7 @@ body{
     -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
 }
 .comentarios{
+    padding-bottom: 100px;
     overflow-y: hidden;
     flex-shrink: 1;
     width: 100%;
