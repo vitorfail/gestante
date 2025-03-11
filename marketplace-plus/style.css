@@ -4,7 +4,7 @@
     padding: 0;
     font-family: "Inter", sans-serif;
     font-weight: 520;
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(0, 0, 0);
 }
 @font-face {
@@ -25,7 +25,44 @@ section{
     height: auto;
     display: flex;
 }
+section:nth-of-type(1) .center{
+    width: 68%;
+}
+section:nth-of-type(1) .center p:nth-of-type(1){
+    line-height: 1.1;
+    width: 75%;
+}
+section:nth-of-type(1) .center p:nth-of-type(2){
+    width: 85%;
+}
+.section1{
+    display: flex; 
+    flex-direction: column;
+}
+.section1 .center{
+    width: 65%;
+}
+.section2{
+}
+.section2 .center{
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.021);  
+    background: white; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-direction: column;
+    border-radius: 30px; 
+    margin: 30px 0px;
+    padding: 50px 0px;
+}
+.section2 .center p:nth-of-type(1){
+    font-family: "Beba Neue Pro", sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: rgb(0, 2, 43);
+
+}
 .video-js{
+    z-index: -1;
     aspect-ratio:16/9;
     width: 100%;
     background-color: none;
@@ -36,7 +73,7 @@ section{
 .titulos{
 font-family: "Beba Neue Pro", sans-serif;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 45px;
   color: #00002e;
   font-weight: 600;
   font-style: normal;
@@ -54,7 +91,7 @@ body{
 }
 
 .center{
-    width: 60%;
+    width: 75%;
     height: auto;
     display: flex;
 }
@@ -95,15 +132,23 @@ body{
     border: none;
 }
 .image1{
-    width: 45%;
-    height: 600px;
+    width: 55%;
+    height: 700px;
     background: url("./img/image1.png");
+    background-size: cover;
     border-radius: 30px;
     background-repeat: no-repeat;
     background-position: center;
 }
 .lado{
-    width: 45%;
+    width: 40%;
+}
+.container1{
+    padding: 50px 0px;
+}
+.container1 .center{
+    align-items: center;
+    justify-content: space-between;
 }
 .container1 .lado p:nth-of-type(1){
     color: rgb(226, 153, 18); 
@@ -111,6 +156,12 @@ body{
     font-family: 'Beba Neue Pro';
     font-size: 25px;
 }
+.container1 .lado p:nth-of-type(2){
+    font-weight: 600;
+    font-family: "Beba Neue Pro", sans-serif;
+    font-size: 35px;
+}
+
 @media screen and (min-width:890px){
 }
 @media screen and (min-width:1800px){
