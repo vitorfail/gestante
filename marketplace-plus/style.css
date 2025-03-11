@@ -54,12 +54,79 @@ section:nth-of-type(1) .center p:nth-of-type(2){
     margin: 30px 0px;
     padding: 50px 0px;
 }
-.section2 .center p:nth-of-type(1){
+.section2 .center .titulo{
     font-family: "Beba Neue Pro", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 40px;
+  width: 75%;
+  text-align: center;
   color: rgb(0, 2, 43);
-
+}
+.section2 .center .vantagens{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.section2 .center .vantagens div{
+    margin: 40px 35px;
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section2 .center .vantagens div img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+}
+.section2 .center .vantagens div p{
+    padding: 20px 0px;
+    text-align: center;
+}
+.section2 .pergunta{
+    padding: 10px 0px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.section2 .pergunta span{
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    position: relative;
+    width: 55px;
+    height: 30px;
+    border-radius: 5px;
+    border:2px solid var(--tema1);
+}
+.section2 .pergunta .marcado::after{
+    content: "";
+    position: absolute;
+    width: 140%;
+    top: -60%;
+    height: 140%;
+    background: url("img/check.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.linha{
+    width: 90%;
+    height: 2px;
+    margin: 50px 0px;
+    background: #c1c1c1;
+}
+.respo_pergunta{
+    width: 70%;
+    text-align: center;
+}
+.porque{
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Beba Neue Pro", sans-serif;
+    color: var(--tema1);
+    padding: 40px 0px;
 }
 .video-js{
     z-index: -1;
@@ -115,7 +182,7 @@ body{
     z-index: 100;
     position: absolute;
     border-radius: 20px;
-    background: rgb(218, 187, 12);
+    background: #dabb0c;
     color: black;
     font-size: 30px;
     padding: 10px 30px;
@@ -128,6 +195,7 @@ body{
     color: black;
     font-weight: 600;
     font-size: 25px;
+    margin-top: 30px;
     padding: 25px 40px;
     border: none;
 }
@@ -135,6 +203,15 @@ body{
     width: 55%;
     height: 700px;
     background: url("./img/image1.png");
+    background-size: cover;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.image2{
+    width: 55%;
+    height: 700px;
+    background: url("./img/image2.png");
     background-size: cover;
     border-radius: 30px;
     background-repeat: no-repeat;
@@ -159,7 +236,7 @@ body{
 .container1 .lado p:nth-of-type(2){
     font-weight: 600;
     font-family: "Beba Neue Pro", sans-serif;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 @media screen and (min-width:890px){
