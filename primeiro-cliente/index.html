@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Guia Definitivo para Conseguir Seu PRIMEIRO CLIENTE/VENDA em 7 Dias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --secondary: #0A2463;
+            --dark: #2D2D2D;
+            --light: #F5F5F5;
+            --white: #FFFFFF;
+            --success: #4CAF50;
+            --danger: #F44336;
+            --black: #000000;
+            --yellow: #FFD700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--black);
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--primary);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--yellow);
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: var(--yellow);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: var(--white);
+        }
+        
+        .hero-image {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            border: 5px solid var(--primary);
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .header-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+        
+        /* Video Section */
+        .video-section {
+            background-color: var(--black);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid var(--primary);
+            border-radius: 10px;
+        }
+        
+        /* Social Proof - Screenshots */
+        .screenshots-section {
+            padding: 60px 0;
+            background-color: var(--secondary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .screenshots-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--yellow);
+        }
+        
+        .screenshots-container {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .screenshots-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .screenshot-slide {
+            min-width: 100%;
+            padding: 0 20px;
+        }
+        
+        .screenshot-img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slider-nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .slider-dot.active {
+            background-color: var(--primary);
+        }
+        
+        /* Pain Section */
+        .pain-section {
+            background-color: var(--light);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+        
+        .pain-points {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pain-point {
+            flex: 1 1 300px;
+            max-width: 350px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+            border-top: 5px solid var(--danger);
+        }
+        
+        .pain-point i {
+            font-size: 2rem;
+            color: var(--danger);
+            margin-bottom: 15px;
+        }
+        
+        .pain-point h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        /* Benefits */
+        .benefits-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: var(--white);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            border-left: 5px solid var(--primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--primary);
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--success);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        .verified-badge i {
+            margin-right: 5px;
+            font-size: 0.7rem;
+        }
+        
+        /* Offer */
+        .offer-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: var(--light);
+        }
+        
+        .offer-box {
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--white);
+        }
+        
+        .offer-box:before {
+            content: "OFERTA LIMITADA";
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .offer-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .price-container {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 500px;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+        
+        .new-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--yellow);
+            margin: 10px 0;
+        }
+        
+        .price-installments {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .bonuses {
+            text-align: left;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .bonus-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            background-color: rgba(255, 107, 53, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .bonus-item i {
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        
+        .cta-button:hover {
+            background-color: #e05a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            background-color: rgba(76, 175, 80, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid var(--success);
+        }
+        
+        .guarantee i {
+            font-size: 2rem;
+            color: var(--success);
+            margin-right: 10px;
+        }
+        
+        /* Order Bump */
+        .order-bump {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            border: 2px dashed var(--primary);
+            background-color: rgba(255, 107, 53, 0.1);
+        }
+        
+        .order-bump-checkbox {
+            margin-right: 15px;
+            transform: scale(1.5);
+        }
+        
+        .order-bump-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .order-bump-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+            border: 2px solid var(--primary);
+        }
+        
+        .order-bump-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .order-bump-price {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--yellow);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .social-icon {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .countdown-item {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            min-width: 70px;
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            display: block;
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .new-price {
+                font-size: 2.5rem;
+            }
+            
+            .old-price {
+                font-size: 1.2rem;
+            }
+            
+            .offer-box {
+                padding: 30px 20px;
+            }
+            
+            .order-bump {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .order-bump-content {
+                flex-direction: column;
+                margin-top: 15px;
+            }
+            
+            .order-bump-image {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .cta-button {
+                font-size: 1.2rem;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">PRIMEIRO CLIENTE EM 7 DIAS</div>
+            <div class="header-content">
+                <h1>O Guia Definitivo para Conseguir Seu PRIMEIRO CLIENTE/VENDA em 7 Dias (Mesmo Sem Experiência!)</h1>
+                <div class="subtitle">Método Validado Por 217 Iniciantes em 2024 - Feche Sua Primeira Venda Sem Investir em Anúncios ou Ter Audiência</div>
+                <div class="header-badge">MÉTODO 100% ORGÂNICO</div>
+                <p>Assim como eu vendi meu primeiro produto digital sem ter seguidores ou investir em anúncios, você vai descobrir o passo a passo que já ajudou até vendedores de doces a faturar rápido.</p>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Empreendedor feliz" class="hero-image">
+            </div>
+        </div>
+    </header>
+    <section class="screenshots-section">
+        <div class="container">
+            <h2 class="screenshots-title">PROVAS SOCIAIS - QUEM JÁ USOU E APROVOU</h2>
+            <p>Veja alguns resultados reais de pessoas que aplicaram o método:</p>
+            
+            <div class="screenshots-container">
+                <div class="screenshots-slider" id="screenshotsSlider">
+                    <div class="screenshot-slide">
+                        <img src="img_0136 (1).png" alt="Print de conversa com cliente" class="screenshot-img">
+                    </div>
+                    <div class="screenshot-slide">
+                        <img src="img_0136 (2).png" alt="Depoimento de aluno" class="screenshot-img">
+                    </div>
+                    <div class="screenshot-slide">
+                        <img src="img_0136.png" alt="Comprovante de pagamento" class="screenshot-img">
+                    </div>
+                </div>
+                <div class="slider-nav" id="sliderDots">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pain-section">
+        <div class="container">
+            <h2 class="section-title">Por Que Você Nunca Conseguiu Vender?</h2>
+            <p>Você já:</p>
+            
+            <div class="pain-points">
+                <div class="pain-point">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>Passou horas no Instagram e não vendeu nada?</h3>
+                    <p>Achou que precisava de milhares de seguidores para começar a vender, quando na verdade você só precisa das estratégias certas.</p>
+                </div>
+                
+                <div class="pain-point">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>Achou que precisava de um site 'perfeito' para começar?</h3>
+                    <p>Perdeu tempo tentando criar a página perfeita quando poderia estar fechando vendas com ferramentas simples que já tem nas mãos.</p>
+                </div>
+                
+                <div class="pain-point">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>Teve medo de investir em anúncios e perder dinheiro?</h3>
+                    <p>A verdade é que seu primeiro cliente está em um lugar que você nunca procurou – e eu vou te mostrar onde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Aprender</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <h3>O Erro #1 Que Faz Você Perder Clientes</h3>
+                    <p>Mostrarei por que frases como "Me chama no privado" matam suas vendas – e o que dizer no lugar (script pronto no Módulo 2). Alunos que aplicaram essa correção tiveram 3x mais respostas no WhatsApp.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📍</div>
+                    <h3>3 Lugares Onde Clientes Prontos Estão Esperando</h3>
+                    <p>Revelarei o fórum de mães onde Carla vendeu R$800 em canecas personalizadas em 1 dia. 87% dos alunos encontraram clientes nesses lugares em menos de 48h.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Diálogo Exato Para Fechar R$300 Sem Ser Chato</h3>
+                    <p>Incluo a mensagem que Rafael usou para vender curso de Excel por R$597 sem ter audiência (Template Bônus). Quem usou esse script teve 70% mais fechamentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--yellow);">Depoimentos de Quem Já Usou</h2>
+            
+            <div class="testimonials-container">
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luiza" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-author">Luiza, professora</div>
+                                <div class="testimonial-role">Vendeu seu primeiro ebook</div>
+                                <span class="verified-badge"><i class="fas fa-check"></i> Comprovado</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Usei o método para vender meu primeiro ebook em 24 horas! Segui exatamente o passo a passo e consegui fechar 3 vendas no mesmo dia. Incrível como funciona!"</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rafael" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-author">Rafael, empreendedor</div>
+                                <div class="testimonial-role">Dono de loja de roupas</div>
+                                <span class="verified-badge"><i class="fas fa-check"></i> Comprovado</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Segui o passo 3 e fechei 3 clientes para minha loja de roupas em uma semana! Antes disso, eu passava horas no Instagram sem resultado nenhum."</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Carla" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-author">Carla, artesã</div>
+                                <div class="testimonial-role">Vende canecas personalizadas</div>
+                                <span class="verified-badge"><i class="fas fa-check"></i> Comprovado</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Revelarei o fórum de mães onde vendi R$800 em canecas em 1 dia! Nunca imaginei que existiam lugares tão fáceis para encontrar clientes."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="offer-section">
+        <div class="container">
+            <div class="offer-box">
+                <h2 class="offer-title">Oferta Exclusiva por Tempo Limitado</h2>
+                <p>Feche seu primeiro cliente em até 7 dias usando estratégias 100% digitais (sem audiência grande) – seguindo o mesmo princípio que já gerou R$100 mil para iniciantes.</p>
+                
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="countdown-hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="countdown-minutes">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="countdown-seconds">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+                
+                <div class="price-container">
+                    <div class="old-price">De R$297 por apenas:</div>
+                    <div class="new-price">R$17</div>
+                    <div class="price-installments">Ou 2x de R$8,50</div>
+                    <p>(apenas para os 50 primeiros!)</p>
+                </div>
+                
+                <div class="bonuses">
+                    <h3>Bônus Exclusivos Incluídos:</h3>
+                    <div class="bonus-item">
+                        <i class="fas fa-gift"></i>
+                        <div><strong>Bônus 1:</strong> PDF com 15 exemplos reais de pitches que funcionaram (valor R$97)</div>
+                    </div>
+                    <div class="bonus-item">
+                        <i class="fas fa-gift"></i>
+                        <div><strong>Bônus 2:</strong> Acesso ao grupo VIP de alunos com casos de estudo mensais (valor R$197)</div>
+                    </div>
+                    <div class="bonus-item">
+                        <i class="fas fa-gift"></i>
+                        <div><strong>Bônus 3:</strong> Planilha de acompanhamento de vendas (valor R$47)</div>
+                    </div>
+                </div>
+                
+                <button class="cta-button">QUERO MEU ACESSO AGORA!</button>
+                
+                <div class="order-bump">
+                    <input type="checkbox" id="order-bump" class="order-bump-checkbox" checked>
+                    <div class="order-bump-content">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Scripts de Venda" class="order-bump-image">
+                        <div class="order-bump-text">
+                            <strong>Scripts de Venda 'Pronto-Copiar' para WhatsApp (R$97)</strong>
+                            <p>Adicione e receba 5 diálogos testados que converteram R$3.200 em vendas para alunos – 100% editáveis para seu nicho.</p>
+                            <div class="order-bump-price">HOJE POR APENAS R$9!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt"></i>
+                    <div><strong>7 Dias de Garantia Incondicional</strong> | Se você não gostar, devolvemos 100% do seu dinheiro sem perguntas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-logo">PRIMEIRO CLIENTE EM 7 DIAS</div>
+            <p>O Guia Definitivo para Conseguir Seu PRIMEIRO CLIENTE/VENDA em 7 Dias (Mesmo Sem Experiência!)</p>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">
+                © 2024 Todos os direitos reservados. Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Screenshots Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.screenshot-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const slider = document.getElementById('screenshotsSlider');
+        
+        function showSlide(index) {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Click on dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+    </script>
+</body>
+</html>

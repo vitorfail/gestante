@@ -315,5 +315,33 @@ body{
     .container1 .center .image1, .container1 .center .lado{
         width: 100%;
     }
-
+    .section2 .center .vantagens{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .section2 .center .vantagens div{
+        width: 100%;
+    }
+    .section2 .center .vantagens div img{
+        width: 40%;
+    }
+    .section2 .lados{
+        flex-direction: column;
+        width: 100%;
+    }
+    .section2 .lados p{
+        order: 2;
+        width: 90%;
+        text-align: justify;
+    }
+    .image2{
+        width: 100%;
+    }
+    .section2 .lados img{
+        margin-bottom: 30px;
+        order: 1;
+        width: 90%;
+    }
 }

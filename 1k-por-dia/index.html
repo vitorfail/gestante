@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feche Seu Primeiro Cliente em 7 Dias - Método Validado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #2D2D2D;
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #FF6B35;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e05a2a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #0A2463;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0A2463;
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #FF6B35;
+            margin-bottom: 30px;
+        }
+        
+        .highlight-box {
+            background-color: #FF6B35;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background-color: #F5F5F5;
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0A2463;
+        }
+        
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .problem-icon {
+            font-size: 2rem;
+            margin-right: 20px;
+            color: #FF3B3B;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 60px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #FF6B35;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            color: #0A2463;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            background-color: #F5F5F5;
+            padding: 60px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .testimonial-name {
+            font-weight: bold;
+            color: #0A2463;
+        }
+        
+        .testimonial-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Offer Section */
+        .offer-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .offer-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 3px solid #FF6B35;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .price {
+            font-size: 4rem;
+            color: #FF6B35;
+            margin: 20px 0;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.5rem;
+        }
+        
+        .bonuses {
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .bonus-icon {
+            color: #FF6B35;
+            margin-right: 10px;
+        }
+        
+        /* Order Bump */
+        .order-bump {
+            background-color: #F5F5F5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .order-bump-checkbox {
+            margin-right: 15px;
+        }
+        
+        .order-bump-content {
+            flex: 1;
+        }
+        
+        .order-bump h4 {
+            color: #0A2463;
+            margin-bottom: 5px;
+        }
+        
+        /* Guarantee */
+        .guarantee-section {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #0A2463;
+            color: white;
+        }
+        
+        .guarantee-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0A2463;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-icons {
+            margin: 20px 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
+            
+            .offer-box {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">1K POR DIA</div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Pare de Ficar Esperando Clientes – Feche Sua Primeira Venda em 7 Dias</h1>
+                <h2>Método Validado Por 217 Iniciantes em 2024</h2>
+                
+                <div class="highlight-box">
+                    <h3>Feche seu primeiro cliente em até 7 dias usando estratégias 100% digitais</h3>
+                    <p>(sem audiência grande) – seguindo o mesmo princípio que já gerou R$100 mil para iniciantes.</p>
+                </div>
+                
+                <p>Assim como eu vendi meu primeiro produto digital sem ter seguidores ou investir em anúncios, você vai descobrir o passo a passo orgânico que já ajudou até vendedores de doces a faturar rápido.</p>
+                
+                <a href="#offer" class="btn btn-primary">QUERO MEU PRIMEIRO CLIENTE AGORA!</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Por Que Você Nunca Conseguir Vender?</h2>
+            
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-times"></i></div>
+                    <div>
+                        <p>Passou horas no Instagram e não vendeu nada?</p>
+                    </div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-times"></i></div>
+                    <div>
+                        <p>Achou que precisava de um site 'perfeito' para começar?</p>
+                    </div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-times"></i></div>
+                    <div>
+                        <p>Teve medo de investir em anúncios e perder dinheiro?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; font-weight: bold;">
+                A verdade é que seu primeiro cliente está em um lugar que você nunca procurou – e eu vou te mostrar onde.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Aprender</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-fire"></i></div>
+                    <h3>O Erro #1 Que Faz Você Perder Clientes</h3>
+                    <p>Mostrarei por que frases como 'Me chama no privado' matam suas vendas – e o que dizer no lugar (script pronto no Módulo 2). Alunos que aplicaram essa correção tiveram 3x mais respostas no WhatsApp.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>3 Lugares Onde Clientes Prontos Estão Esperando</h3>
+                    <p>Revelarei o fórum de mães onde Carla vendeu R$800 em canecas personalizadas em 1 dia (página 14 do guia). 87% dos alunos encontraram clientes nesses lugares em menos de 48h.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Diálogo Exato Para Fechar R$300 Sem Ser Chato</h3>
+                    <p>Incluo a mensagem que Rafael usou para vender curso de Excel por R$597 sem ter audiência (Template Bônus). Quem usou esse script teve 70% mais fechamentos que abordagens convencionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Quem Já Usou e Aprovou</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luiza" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Luiza</div>
+                            <div class="testimonial-role">Professora</div>
+                        </div>
+                    </div>
+                    <p>"Usei o método para vender meu primeiro ebook em 24 horas! Nunca imaginei que seria possível sem ter seguidores."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rafael" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Rafael</div>
+                            <div class="testimonial-role">Empreendedor</div>
+                        </div>
+                    </div>
+                    <p>"Segui o passo 3 e fechei 3 clientes para minha loja de roupas em uma semana! Finalmente entendi como vender online."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Carla" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Carla</div>
+                            <div class="testimonial-role">Artesã</div>
+                        </div>
+                    </div>
+                    <p>"Vendi R$800 em canecas personalizadas em 1 dia usando um dos lugares secretos que ensinam no guia. Incrível!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Offer Section -->
+    <section class="offer-section" id="offer">
+        <div class="container">
+            <h2 class="section-title">Oferta Exclusiva</h2>
+            
+            <div class="offer-box">
+                <h3>O Guia Definitivo para Conseguir Seu PRIMEIRO CLIENTE/VENDA em 7 Dias</h3>
+                
+                <div class="price">R$97</div>
+                <p class="original-price">De R$297</p>
+                <p>(apenas para os 50 primeiros!)</p>
+                
+                <div class="bonuses">
+                    <h4>Bônus Inclusos:</h4>
+                    <div class="bonus-item">
+                        <div class="bonus-icon"><i class="fas fa-gift"></i></div>
+                        <div>PDF com 15 exemplos reais de pitches que funcionaram</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-icon"><i class="fas fa-gift"></i></div>
+                        <div>Acesso ao grupo VIP de alunos com casos de estudo mensais</div>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-primary">QUERO MEU ACESSO AGORA!</a>
+                
+                <div class="order-bump">
+                    <div class="order-bump-checkbox">
+                        <input type="checkbox" id="order-bump" checked>
+                    </div>
+                    <div class="order-bump-content">
+                        <h4>Scripts de Venda 'Pronto-Copiar' para WhatsApp (R$9)</h4>
+                        <p>Adicione e receba 5 diálogos testados que converteram R$3.200 em vendas para alunos – 100% editáveis para seu nicho.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>7 Dias de Garantia | Risco Zero</h3>
+            <p>Se em 7 dias você não tiver pelo menos um lead qualificado ou venda, devolvemos seu dinheiro sem questionamentos.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">1K POR DIA</div>
+            <p>© 2024 Todos os direitos reservados</p>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <p>Aprovado por 92% dos compradores</p>
+        </div>
+    </footer>
+</body>
+</html>
